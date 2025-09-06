@@ -1,0 +1,409 @@
+@import url('Fonts/font.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url('Backgroud/grain\ Texture.png');
+    font-family: 'Beatrice', sans-serif, Helvetica;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    max-width: 75rem;
+    margin: 3.125rem auto;
+    padding: 1.25rem;
+}
+
+/* CSS da primeira seção (inicio) */
+
+@keyframes cabecalho-aparecer {
+    0% {
+        background-color: white;
+        height: 0rem;
+}}
+
+@keyframes cabecalho-voltar {
+    0% {
+        background-color: white;
+        height: 5.625rem;
+    }
+
+    100% {
+        height: 0;
+    }
+}
+
+header {
+    position: fixed;
+    height: 5.625rem;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    animation: cabecalho 0.3s linear 1;
+}
+
+@keyframes nav-aparecer {
+    0% {
+        padding: 0 1.25rem;
+    }
+
+    100% {
+        padding: 1.25rem;
+    }
+}
+
+@keyframes bounce {
+  0%   { transform: translateX(calc(+150px)); }
+  100% { transform: translateX(calc(-150px)); }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 75rem;
+    margin: auto;
+    padding: 1.25rem;
+}
+
+ul {
+    width: 18.75rem;
+    font-weight: 400;
+    font-size: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+
+}
+
+
+.icones-nav {
+    width: 3.125rem;
+    height: 3.125rem;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icones-nav:hover {
+    background-color: #242424;
+    transform: translateY(-0.2rem);
+    transition: 0.2s;
+}
+
+.icones-texto {
+    width: 4.75rem;
+    height: 3.125rem;
+    position: relative;
+    margin-right: 2.625rem;
+    
+
+    color: white;
+    background-color: black;
+    border-radius: 1.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.icones-texto:hover {
+    background-color: #242424;
+    transform: translateY(-0.2rem);
+    transition: 0.2s;
+}
+
+.icones-texto > span {
+    width: 3.125rem;
+    height: 3.125rem;
+    background-color: black;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    left: 90%;
+}
+
+.icones-texto > span:hover {
+    background-color: #242424;
+}
+
+ul:nth-child(1) > li:nth-child(1){
+    cursor: auto;
+    height: 2rem;
+    align-content: end;
+}
+
+.inicio > header > nav > ul > li:nth-child(n + 2):hover {
+    background-color: #8a8a8a60;
+    border-radius: 2px;
+    padding: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.input-pesquisar {
+    max-width: 23.125rem;
+    height: 3.125rem;
+    background-color: #bbbbbb7d;
+    border-radius: 5px;
+    
+    display: flex;
+    align-items: center;
+
+    margin-top: 7rem;
+}
+
+.input-pesquisar > img {
+    padding: 1rem;
+}
+
+.input-pesquisar > input {
+    width: 18.125rem;
+    height: 2.25rem;
+    padding: 1.5rem;
+    background-color: transparent;
+    border: none;
+    text-align: right;
+}
+
+.input-pesquisar > input::placeholder{
+    color: rgba(0, 0, 0, 0.664);
+}
+
+.input-pesquisar > input:focus-visible {
+    outline: none;
+}
+
+.titulo {
+    display: inline-block;
+
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+
+    margin-top: 5rem;
+}
+
+.inicio > p {
+    width: 87px;
+
+    font-size: 1rem;
+    font-weight: 200;
+    
+    margin-top: 0.5rem;
+}
+
+.botoes-inicio {
+    max-width: 75rem;
+    margin-top: 12rem;
+    height: 2.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.botao-shop {
+    width: 355px;
+    height: 2.5rem;
+    background-color: #bbbbbb7d;
+    border: none;
+    border-radius: 5px;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px 1.25rem;
+    cursor: pointer;
+}
+
+.botao-shop > p {
+    width: 8rem;
+}
+
+.botoes-navegacao {
+    display: flex;
+    gap: 0.7rem;
+}
+
+.botao-voltar {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    background-color: transparent;
+    border-color: #bbbbbb6d;
+    
+}
+
+.botao-avancar {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    background-color: transparent;
+    border-color: #bbbbbb7d;
+    
+}
+
+.imagens-inicio {
+    max-width: 45.8rem;
+    display: flex;
+    gap: 2.6rem;
+}
+
+.imagens-inicio > img {
+    max-width: 47%;
+}
+
+/* CSS da segunda seção (Novidades)*/
+
+.novidades-titulo {
+    display: flex;
+    align-items: center;
+}
+
+.novidades-titulo > p{
+    color: #000E8A;
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    transform: translateY(2.25rem);
+}
+
+.novidades > a {
+    color: #5E5E5E;
+
+    display: flex;
+    justify-content: end;
+    text-decoration-line: none;
+    margin-bottom: 1.5rem;
+}
+
+.container-produtos {
+    display: flex;
+    gap: 1.5rem;
+    overflow: hidden;
+
+    mask-image: linear-gradient(to right, black 90%, transparent 100%);
+}
+
+.container-produtos::after {
+    border: 1.25rem solid;
+}
+
+.produto {
+    flex: 0 0 20rem;
+    height: 23rem;
+    position: relative;
+    
+}
+
+.produto > img{
+    width: 100%;
+    height: 313px;
+}
+.produto > button {
+    width: 2rem;
+    height: 2rem;
+    background-color: #dcdcdc63;
+    border: none;
+    
+    position: absolute;
+    left: calc(50% - 1rem);
+    bottom: 55px;
+}
+
+.produto > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.produto > p {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.664);
+}
+
+.produto > div > h3 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.novidades > .botoes-navegacao {
+    justify-content: center;
+    margin-top: 1.8rem;
+}
+
+/* CSS da seção de coleções*/
+
+#produto-grande {
+    width: 22rem;
+}
+
+.colecoes > p {
+    margin-top: 1.3rem;
+    color: #8A8A8A;
+    text-align: center;
+    line-height: 1rem;
+}
+
+/* CSS da seção de texto e imagens no final da pagina*/
+
+.informacoes {
+    text-align: center;
+}
+
+.informacoes > h2 {
+    font-weight: 400;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.informacoes > p {
+    max-width: 42rem;
+    margin: auto;
+    margin-bottom: 6.4rem;
+
+    font-family: 'Beatrice Deck Trial Light', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.carrosel-imagens {
+    padding: 0 0 7rem 0;
+
+    display: flex;
+    gap: 2.25rem;
+    overflow: hidden;
+
+    mask-image: linear-gradient(to right, black 90%, transparent 100%);
+}
+
+.imagem {
+    transform: translateY(6.5rem);
+}
