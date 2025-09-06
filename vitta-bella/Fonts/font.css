@@ -1,0 +1,30 @@
+
+    @font-face {
+    font-family: 'Beatrice';
+    font-style: normal;
+    font-weight: 200;
+    src: local('Beatrice Deck Trial Regular'), url('BeatriceDeckTRIAL-Regular-BF64829e8e41476.woff') format('woff');
+    }
+    
+    @font-face {
+    font-family: 'Beatrice Deck Trial Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Beatrice Deck Trial Light'), url('BeatriceDeckTRIAL-Light-BF64829e8e6b5e8.woff') format('woff');
+    }
+
+
+    @font-face {
+    font-family: 'Beatrice';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Beatrice Deck Trial Medium'), url('BeatriceDeckTRIAL-Medium-BF64829e8e8d71a.woff') format('woff');
+    }
+
+    @font-face {
+    font-family: 'Beatrice';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Beatrice Deck Trial Extrabold'), url('BeatriceDeckTRIAL-Extrabold-BF64829e8ed31e6.woff') format('woff');
+    }
+    

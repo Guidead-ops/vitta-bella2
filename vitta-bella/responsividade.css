@@ -1,0 +1,146 @@
+/* Responsividade para desktops*/
+@media (min-width: 48em) and (max-width: 64em)  {
+
+ul {
+    width: 18.75rem;
+}
+
+.imagens-inicio {
+    align-items: end;
+}
+
+.imagens-inicio > img:nth-child(1) {
+    max-width: 100%
+}
+
+.imagens-inicio > img:nth-child(2) {
+    display: none;
+}
+
+}
+
+/* Responsividade para tablets*/
+@media (max-width: 48em) {
+
+.inicio > header > nav > ul {
+    width: 6.75rem;
+}
+
+.inicio > header > nav > ul:nth-child(1) {
+    width: 2rem;
+}
+
+.inicio > header > nav > ul:nth-child(1) > li:nth-child(n + 2) {
+    display: none;
+}
+
+.inicio > header > nav > ul:nth-child(3) > li:nth-child(-n + 1) {
+    display: none;
+}
+
+.icones-texto{
+    width: auto;
+    margin: 0;
+}
+
+.icones-texto > p {
+    display: none;
+}
+
+.icones-texto > span {
+    position: static;
+}
+
+.imagens-inicio > img:nth-child(1) {
+    max-width: 100%
+}
+
+.imagens-inicio > img:nth-child(2) {
+    display: none;
+}
+
+}
+
+/* Algumas alterações nas imagens para melhor responsividade entre mobile e tablet*/
+@media (max-width: 40.625em) {
+
+.botoes-inicio {
+    max-width: 25rem;
+    flex-wrap: wrap-reverse;
+    margin-top: 15rem;
+}
+
+.imagens-inicio > img {
+    width: 45%;
+}
+
+.imagens-inicio > img:nth-child(2) {
+    display: block;
+}
+
+.carrosel-imagens {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.carrosel-imagens > img {
+    max-width: 90%;
+}
+
+.imagem {
+    transform: translateX(2rem);
+}
+
+
+}
+
+/* Responsividade para mobile*/
+@media (max-width: 27.688em) {
+
+.titulo {
+    font-size: 1.5rem;
+}
+
+.botoes-navegacao {
+    display: none;
+}
+
+.container-produtos {
+    flex-wrap: wrap;
+    justify-content: center;
+    mask-image: none;
+}
+
+.produto {
+    max-width: 98%;
+    flex: none;
+}
+
+.produto > div > h3{
+    font-size: 0.8rem;
+}
+
+.informacoes > h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+}
+
+/* Ajuste para ficar somente uma imagem com até 450px*/
+@media (max-width: 21.875em) {
+
+.imagens-inicio{
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.imagens-inicio > img:nth-child(2) {
+    display: none;
+}
+
+.imagens-inicio > img:nth-child(1) {
+    width: 67%;
+}
+
+}
