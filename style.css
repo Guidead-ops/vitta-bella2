@@ -21,7 +21,7 @@ a {
 
 section {
     max-width: 75rem;
-    margin: 3.125rem auto;
+    margin: 3rem auto;
     padding: 1.25rem;
 }
 
@@ -361,8 +361,12 @@ ul:nth-child(1) > li:nth-child(1){
 
 /* CSS da seção de coleções*/
 
-#produto-grande {
-    width: 22rem;
+#segundo-container {
+    height: 23rem;
+    mask-image: none;
+
+    flex-wrap: wrap;
+    gap: 2rem 4rem;
 }
 
 .colecoes > p {

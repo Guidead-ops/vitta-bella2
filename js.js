@@ -107,11 +107,12 @@ carrossel = document.querySelector(".container-produtos");
 finalDoCarrossel = 0
 maximoDoCarrossel = carrossel.scrollWidth - carrossel.clientWidth
 pulo = maximoDoCarrossel/(produtos.length - 3)
+
 botaoVoltar.addEventListener("click", () => {
     contador += pulo
-    console.log(contador)
-    if(finalDoCarrossel < maximoDoCarrossel) {
-        
+    
+    if(finalDoCarrossel > 5) {
+        finalDoCarrossel -= pulo
         produtoss.forEach((produto) => {
             produto.style.transform = `translateX(${contador}px)`;
             produto.style.transition = "0.4s"
@@ -136,11 +137,10 @@ botaoVoltar.addEventListener("click", () => {
 
 botaoAvancar.addEventListener("click", () => {
     contador -= pulo
-    console.log(contador)
+    finalDoCarrossel += pulo
     
-    if(contador > -maximoDoCarrossel) {
-        finalDoCarrossel += Math.max(pulo, -maximoDoCarrossel)
-        console.log(finalDoCarrossel)
+    if(contador > -maximoDoCarrossel - 5) {
+        
         produtoss.forEach((produto) => {
             produto.style.transform = `translateX(${contador}px)`;
             produto.style.transition = "0.4s"
@@ -159,5 +159,33 @@ botaoAvancar.addEventListener("click", () => {
             
         })
         contador += pulo
+        finalDoCarrossel -= pulo
     }
 })
+
+function aumentar() {
+    produtos = document.getElementById("segundo-container");
+    produto = produtos.querySelectorAll(".produto")
+    linhas = Math.ceil(produto.length/3) //arredonda para cima, o "3" é quantos produtos tenho cada linha
+    
+    if(linhas > 1) {
+        produtos.style.height = `${linhas * 23 + 2}rem`
+        produtos.style.transition = "0.5s"
+        alturaCarrosel = parseInt(getComputedStyle(produtos).height)
+        more = document.querySelector(".more")
+        more.textContent = more.innerText === "More" ? "less" : "More";
+        seta = document.querySelector(".seta-more")
+        seta.style.transform = "rotateZ(180deg)"
+        seta.style.transition = "0.5s"
+        if(alturaCarrosel > 368) {
+            produtos.style.height = `23rem`
+            produtos.style.transition = "0.5s"
+            seta.style.transform = "rotateZ(0deg)"
+            seta.style.transition = "0.5s"
+        }
+        
+    }else {
+        more = document.querySelector(".more")
+        more.textContent = "Sem more"
+    }
+}
